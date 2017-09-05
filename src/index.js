@@ -6,21 +6,21 @@ import Home from './modules/Home';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-	<BrowserRouter>
-		<div>
-			<App/>
-			<div>
-				<Route render={({location, history, match}) => {
-					return (
-						<Switch key={location.key} location={location}>
-							<Route exact path="/" component={Home}/>
-						</Switch>
-					);
-				}} />
-		</div>
-		</div>
-	</BrowserRouter>,
-	document.getElementById('root')
+    <BrowserRouter>
+        <div>
+            <App/>
+            <div>
+            <Route render={({location, history, match}) => {
+                return (
+                <Switch key={location.key} location={location}>
+                    <Route exact path="/" component={Home}/>
+                </Switch>
+                );
+            }} />
+            </div>
+        </div>
+    </BrowserRouter>,
+    document.getElementById('root')
 );
 
 registerServiceWorker();
