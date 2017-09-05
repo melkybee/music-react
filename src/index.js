@@ -10,16 +10,16 @@ ReactDOM.render(
 		<div>
 			<App/>
 			<div>
-			  <Route render={({location, history, match}) => {
-			    return (
-		        <Switch key={location.key} location={location}>
-		          <Route exact path="/" component={Home}/>
-		        </Switch>
-			    );
-			  }} />
-			</div>
-	  </div>
-  </BrowserRouter>,
+				<Route render={({location, history, match}) => {
+					return (
+						<Switch key={location.key} location={location}>
+							<Route exact path="/" component={Home}/>
+						</Switch>
+					);
+				}} />
+		</div>
+		</div>
+	</BrowserRouter>,
 	document.getElementById('root')
 );
 
